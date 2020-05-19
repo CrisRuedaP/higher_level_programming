@@ -3,10 +3,5 @@
 
 
 class Square():
-    """An empty class
-
-    Attributes: None
-
-    """
-
+    """An empty class."""
     pass
