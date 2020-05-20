@@ -48,10 +48,6 @@ class Square:
 
     def my_print(self):
         """Public instance method that prints the square"""
-        if self.__size == 0:
-            print("")
-            return
-
         if self.__size > 0:
             for row in range(self.__position[1]):
                 print("")
