@@ -9,11 +9,8 @@ class Square:
     """
 
     def __init__(self, size=0, position=(0, 0)):
-        if not isinstance(size, int):
-            raise TypeError("size must be an integer")
-        elif size < 0:
-            raise ValueError("size must be >= 0")
         self.__size = size
+        self.__position = position
 
     @property
     def size(self):
@@ -24,6 +21,8 @@ class Square:
     def size(self, value):
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
+        elif size < 0:
+            raise ValueError("size must be >= 0")
         self.__size = value
 
     @property
@@ -49,9 +48,14 @@ class Square:
 
     def my_print(self):
         """Public instance method that prints the square"""
-        for row in range(self.__size):
-            for column in range(self.__size):
-                print("#", end="")
-            print("")
         if self.__size == 0:
             print("")
+        elif self.__size > 0:
+            for row in range(self.__position[1]):
+                print("")
+            for column in range(self.__size):
+                for spaces in range(self.__position[0]):
+                    print(" ", end="")
+                for i in range(self.__size):
+                    print("#", end="")
+                print("")
