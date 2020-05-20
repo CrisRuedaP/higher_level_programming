@@ -50,7 +50,7 @@ class Square:
         """Public instance method that prints the square"""
         if self.__size == 0:
             print("")
-        elif self.__size > 0:
+        else:
             for row in range(self.__position[1]):
                 print("")
             for column in range(self.__size):
