@@ -54,14 +54,7 @@ Traceback (most recent call last):
 ...
 TypeError: matrix must be a matrix (list of lists) of integers/floats
 
->>> matrix = []
->>> matrix_divided(matrix, 1)
+>>> matrix_divided()
 Traceback (most recent call last):
 ...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
-
->>> matrix = [[], []]
->>> matrix_divide(matrix, 2)
-Traceback (most recent call last):
-...
-TypeError: matrix must be a matrix (list of lists) of integers/floats
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
