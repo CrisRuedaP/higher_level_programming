@@ -15,11 +15,8 @@ My name is Thom Yorke
 >>> say_my_name(" ", "Yorke")
 My name is   Yorke
 
->>> say_my_name("Björk")
-My name is Bob
-
->>> say_my_name("David Robert", None)
-My name is David Robert
+>>> say_my_name("Bjork")
+My name is Bjork 
 
 >>> say_my_name("David Robert", "Jones")
 My name is David Robert Jones
