@@ -6,8 +6,8 @@ Using ``text_indentation``
 
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 
->>> text_indentation("Quonam modo? Non autem hoc: igitur ne illud quidem.") 
-Quonam modo? 
+>>> text_indentation("Quonam modo? Non autem hoc: igitur ne illud quidem.")
+Quonam modo?
 <BLANKLINE>
 Non autem hoc:
 <BLANKLINE>
