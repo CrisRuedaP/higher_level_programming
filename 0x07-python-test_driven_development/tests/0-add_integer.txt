@@ -33,6 +33,11 @@ Using ``add_integer``
 >>> add_integer(999999999, 1)
 1000000000
 
+>>> add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() missing 1 required positional argument: 'a'
+
 >>> add_integer("Björk", 2)
 Traceback (most recent call last):
 ...
@@ -65,7 +70,7 @@ Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
 
-import math, numpy
+import math
 >>> add_integer(2, float("nan"))
 Traceback (most recent call last):
 ...
@@ -73,8 +78,10 @@ ValueError: cannot convert float NaN to integer
 
 >>> add_integer(1, None)
 Traceback (most recent call last):
+...
 TypeError: b must be an integer
 
 >>> add_integer(None, 2)
 Traceback (most recent call last):
+...
 TypeError: a must be an integer
