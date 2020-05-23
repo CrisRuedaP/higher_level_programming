@@ -60,7 +60,7 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 TypeError: b must be an integer
 
->>> add_integer(1, None)
+>>> add_integer(1)
 Traceback (most recent call last):
 ...
 TypeError: add_integer() missing 1 required positional argument
@@ -70,7 +70,25 @@ Traceback (most recent call last):
 ...
 TypeError: add_integer() missing 2 required positional argument: a and b
 
->>> add_integer(float('inf'), float('inf'))
+>>> add_integer(1, float("inf"))
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float inf to integer
+
+>>> add_integer(float("inf"), 2)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float inf to integer
+
+>>> add_integer(float("nan"), float("nan"))
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
+
+>>> add_integer(1, None)
+Traceback (most recent call last):
+TypeError: b must be an integer
+
+>>> add_integer(None, 2)
+Traceback (most recent call last):
+TypeError: a must be an integer
