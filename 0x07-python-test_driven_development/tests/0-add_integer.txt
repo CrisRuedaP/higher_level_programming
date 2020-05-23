@@ -64,3 +64,8 @@ TypeError: b must be an integer
 Traceback (most recent call last):
 ...
 TypeError: a must be an integer
+
+>>> add_integer(float('inf'), float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: converting float to int.
