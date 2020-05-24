@@ -33,6 +33,9 @@ Using ``add_integer``
 >>> add_integer(999999999, 1)
 1000000000
 
+>>> add_integer(2)
+100
+
 >>> add_integer()
 Traceback (most recent call last):
 ...
