@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Import BaseGeometry and define a square class
+Import Rectangle and define a square class
 """
 Rectangle = __import__('9-rectangle').Rectangle
 
