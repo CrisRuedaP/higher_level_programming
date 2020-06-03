@@ -16,6 +16,12 @@ Traceback (most recent call last):
 ValueError: int must be greater than 0
 
 >>> BaseGeometry = BaseGeometry()
+>>> BaseGeometry.integer_validator("int", 0)
+Traceback (most recent call last):
+...
+ValueError: int must be greater than 0
+
+>>> BaseGeometry = BaseGeometry()
 >>> BaseGeometry.integer_validator("Hello", -1)
 Traceback (most recent call last):
 ...
