@@ -35,7 +35,7 @@ class Base:
         new_lt = []
         filename = "{}.json".format(cls.__name__)
         if list_objs is None:
-            new_lt = []
+            return new_lt
         else:
             with open(filename, "w", encoding="utf-8") as f:
                 for items in list_objs:
@@ -47,7 +47,7 @@ class Base:
         """returns the list of the JSON string representation"""
         new_list = []
         if json_string is None:
-            new_list = []
+            return new_list
         else:
             new_list.append(json_string)
             return json.loads(json_string)
