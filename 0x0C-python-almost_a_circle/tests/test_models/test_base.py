@@ -11,6 +11,13 @@ from models.square import Square
 
 class Base_Tests(unittest.TestCase):
     """tests for Base class"""
+
+    def test_pep8(self):
+        """check for pep8"""
+        pep8style = pep8.StyleGuide(quite=True)
+        result = pep8style.check_files(['./models/base.py'])
+        self.assertEqual(result.total_errors, 0)
+
     def Test_BaseMethods(self):
         """check for methods"""
         self.assertTrue(Base.__init__.__doc__)
@@ -57,6 +64,3 @@ class Base_Tests(unittest.TestCase):
         empty_ls = []
         st_out = Rectangle.from_json_string(st_in)
         self.assertEqual(len(st_out), 2)
-
-if __name__ == '__main__':
-    unittest.main()

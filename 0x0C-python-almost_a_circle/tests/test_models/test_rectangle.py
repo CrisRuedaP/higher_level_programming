@@ -13,6 +13,12 @@ from models.square import Square
 class Rectangle_Tests(unittest.TestCase):
     """test for Rectangle class"""
 
+    def test_pep8(self):
+        """check for pep8"""
+        pep8style = pep8.StyleGuide(quite=True)
+        result = pep8style.check_files(['./models/rectangle.py'])
+        self.assertEqual(result.total_errors, 0)
+
     def test_R_integer_width(self):
         """integer validator"""
         with self.assertRaisesRegex(TypeError, "width must be an integer"):
