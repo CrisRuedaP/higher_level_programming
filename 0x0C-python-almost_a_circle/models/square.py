@@ -32,7 +32,7 @@ class Square(Rectangle):
         Assigns attributes
         Each key represents an attribute to the instance
         """
-        nk_args = ["id", "width", "height", "x", "y"]
+        nk_args = ["id", "size", "x", "y"]
         i = 0
         length = len(args)
         if length > 0:
