@@ -33,7 +33,7 @@ class Base:
         to a file
         """
         new_lt = []
-        filename = ("{}.json".format(cls.__name__))
+        filename = "{}.json".format(cls.__name__)
         if list_objs is None:
             new_lt = []
         else:
