@@ -13,8 +13,7 @@ class Square(Rectangle):
     def __str__(self):
         """overloading method"""
         return ("[square] ({}) {}/{} - {}".format(self.id, self.x,
-                                                  self.y, self.width,
-                                                  self.height))
+                                                  self.y, self.width))
 
     @property
     def size(self):
