@@ -35,7 +35,7 @@ class Base:
         new_lt = []
         filename = "{}.json".format(cls.__name__)
         if not list_objs or list_objs is None:
-            return new_lt = []
+            return new_lt
         else:
             with open(filename, "w", encoding="utf-8") as f:
                 for items in list_objs:
