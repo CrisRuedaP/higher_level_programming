@@ -37,9 +37,9 @@ class Base:
         if not list_objs or list_objs is None:
             new_lt = []
         else:
-            for items in list_objs:
-                new_lt.append(cls.to_dictionary(items))
             with open(filename, "w", encoding="utf-8") as f:
+                for items in list_objs:
+                    new_lt.append(cls.to_dictionary(items))
                 f.write(cls.to_json_string(new_lt))
 
     @staticmethod
