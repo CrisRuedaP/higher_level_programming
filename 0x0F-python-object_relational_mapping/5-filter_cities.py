@@ -38,7 +38,9 @@ if __name__ == '__main__':
     all_cities = cursor.fetchall()
 
     # showing all the states one by one
+    result = []
     for city in all_cities:
-        print(city)
+        result.append(city[0])
+    print(", ".join(result))
     cursor.close()
     db.close()
