@@ -30,8 +30,8 @@ if __name__ == '__main__':
 
     # getting all the states which are present in database
     # 'execute()' method is used to compile a 'SQL' statement
-    cursor.execute("SELECT * FROM states WHERE name LIKE '{}' ORDER BY id ASC"
-                   .format(name))
+    cursor.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'\
+    ORDER BY id ASC".format(name))
 
     # it returns list of states present in the database
     all_states = cursor.fetchall()
