@@ -20,10 +20,8 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=engine)
     session = Session()
-
     new_sta = State(name="Louisiana")
     session.add(new_sta)
-
-    for state in session.query(State).order_by(State.id).all():
-        print("{}: {}".format(state.id, state.name))
+    session.commit()
+    print(new_sta.id)
     session.close()
