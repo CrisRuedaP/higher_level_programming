@@ -15,7 +15,6 @@ if __name__ == '__main__':
     mysql_username = argv[1]
     mysql_password = argv[2]
     database_name = argv[3]
-    name = argv[4]
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'
                            .format(mysql_username, mysql_password,
@@ -24,8 +23,9 @@ if __name__ == '__main__':
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    state = session.query(State).filter(State.name == name).first()
+    state = session.query(State).filter(State.name == argv[4]).first()
     if not state:
         print("Not Found")
     else:
         print("{}".format(state.id))
+    session.close()
