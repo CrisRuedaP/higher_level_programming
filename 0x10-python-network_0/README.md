@@ -56,6 +56,9 @@ What you should learn from this project:
 ### [6. Find a peak](./6-peak.py)
 * Technical interview preparation: 
 
+
+### [7. Only status code](./100-status_code.sh)
+* Write a Bash script that sends a request to a URL passed as an argument, and displays only the status code of the response.
 ---
 
 ## Author
