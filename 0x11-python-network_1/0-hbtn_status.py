@@ -8,5 +8,5 @@ if __name__ == "__main__":
         html = response.read()
         print("Body response:")
         print("\t - type:", type(html))
-        print("\t - content: ", html)
+        print("\t - content:", html)
         print("\t - uft8 content:", html.decode("utf-8"))
