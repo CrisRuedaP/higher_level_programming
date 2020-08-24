@@ -9,7 +9,7 @@ import sys
 
 
 if __name__ == "__main__":
-    urllib.request.Request
+    req = urllib.request.Request(sys.argv[1])
     try:
         with urllib.request.urlopen(req) as response:
             the_page = response.read()
