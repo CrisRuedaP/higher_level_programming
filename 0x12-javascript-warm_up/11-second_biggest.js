@@ -1,9 +1,6 @@
 #!/usr/bin/node
 const args = process.argv;
-
-args.shift();
-args.shift();
-const splitted = args;
+const splitted = args.splice(2);
 
 function secondLargest (arr) {
   const sorted = arr.sort(function (a, b) {
@@ -13,10 +10,10 @@ function secondLargest (arr) {
   const length = sorted.length;
   if (length > 1) {
     const result = Number(sorted.pop());
-    console.log(result);
+    return result;
   } else {
-    console.log(0);
+    return 0;
   }
 }
 
-secondLargest(splitted);
+console.log(secondLargest(splitted));
