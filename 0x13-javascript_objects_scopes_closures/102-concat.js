@@ -1,8 +1,8 @@
 #!/usr/bin/node
-const PathfileA = process.argv[1];
-const PathfileB = process.argv[2];
-const destination = process.argv[3];
+const srcA = process.argv[2];
+const srcB = process.argv[3];
+const dest = process.argv[4];
 const fs = require('fs');
-const first = fs.readFileSync(PathfileA);
-const second = fs.readFileSync(PathfileB);
-fs.writeFileSync(destination, first + second);
+const srcTextA = fs.readFileSync(srcA);
+const srcTextB = fs.readFileSync(srcB);
+fs.writeFileSync(dest, srcTextA + srcTextB);
